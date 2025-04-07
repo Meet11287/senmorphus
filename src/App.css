@@ -1,0 +1,107 @@
+import React from "react";
+import "./App.css";
+
+const soaps = [
+  { name: "Ultimate Rose Soap", price: 199, emoji: "🌹" },
+  { name: "Lavender Breeze", price: 179, emoji: "💜" },
+  { name: "Neem & Tulsi Purity", price: 169, emoji: "🌿" },
+  { name: "Charcoal Detox", price: 189, emoji: "⚫" },
+  { name: "Honey Glow", price: 159, emoji: "🍯" },
+  { name: "Minty Fresh", price: 149, emoji: "🌱" },
+  { name: "Sandalwood Calm", price: 189, emoji: "🪵" },
+  { name: "Aloe Vera & Chandan", price: 119, emoji: "🍃🪵" },
+  { name: "Multani Mitti Magic", price: 119, emoji: "🧱" },
+  { name: "Beetroot Glow", price: 119, emoji: "🍠✨" },
+];
+
+function App() {
+  return (
+    <div style={{ backgroundColor: "#ffffff", minHeight: "100vh", padding: "20px", fontFamily: "sans-serif" }}>
+      
+      {/* Header */}
+      <header style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "30px" }}>
+        <h1 style={{ color: "#bfa046" }}>🌿 Senmorphus</h1>
+        <button style={{
+          backgroundColor: "#bfa046",
+          color: "#fff",
+          border: "none",
+          borderRadius: "8px",
+          padding: "10px 20px",
+          cursor: "pointer",
+        }}>
+          🛒 Add to Cart
+        </button>
+      </header>
+
+      {/* Soap Grid */}
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "20px" }}>
+        {soaps.map((soap, index) => (
+          <div
+            key={index}
+            style={{
+              border: "1px solid #ddd",
+              borderRadius: "15px",
+              padding: "15px",
+              backgroundColor: "#fffefc",
+              boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
+              textAlign: "center"
+            }}
+          >
+            <div style={{ fontSize: "2rem" }}>{soap.emoji}</div>
+            <h3 style={{ color: "#bfa046" }}>{soap.name}</h3>
+            <p style={{ fontWeight: "bold", marginBottom: "10px" }}>₹{soap.price}</p>
+            <button style={{
+              backgroundColor: "#bfa046",
+              color: "white",
+              border: "none",
+              borderRadius: "8px",
+              padding: "8px 15px",
+              cursor: "pointer"
+            }}>
+              Add to Cart
+            </button>
+          </div>
+        ))}
+      </div>
+
+      {/* Feedback Section */}
+      <section style={{ marginTop: "50px" }}>
+        <h2 style={{ color: "#bfa046" }}>💬 Feedback</h2>
+        <textarea
+          rows="4"
+          placeholder="Write your feedback here..."
+          style={{
+            width: "100%",
+            marginTop: "10px",
+            padding: "10px",
+            borderRadius: "10px",
+            border: "1px solid #ccc"
+          }}
+        />
+      </section>
+
+      {/* Contact Section */}
+      <section style={{ marginTop: "40px" }}>
+        <h2 style={{ color: "#bfa046" }}>📞 Contact Us</h2>
+        <p>Email: <a href="mailto:senmorphus@gmail.com">senmorphus@gmail.com</a></p>
+        <p>Phone: +91 9876543210</p>
+      </section>
+
+      {/* Payment Section */}
+      <section style={{ marginTop: "40px" }}>
+        <h2 style={{ color: "#bfa046" }}>💳 Payment Options</h2>
+        <ul>
+          <li>✅ Paytm: <strong>9876543210</strong></li>
+          <li>✅ Google Pay (GPay): <strong>gpay@senmorphus</strong></li>
+        </ul>
+      </section>
+
+      {/* Footer */}
+      <footer style={{ textAlign: "center", marginTop: "60px", fontSize: "0.9rem", color: "#888" }}>
+        © 2025 Senmorphus. Pure, Natural & Made with Love 💛
+      </footer>
+    </div>
+  );
+}
+
+export default App;
