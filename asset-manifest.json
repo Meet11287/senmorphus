@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/senmorphus/static/css/main.e6c13ad2.css",
+    "main.js": "/senmorphus/static/js/main.976d1ee0.js",
+    "static/js/453.7538d639.chunk.js": "/senmorphus/static/js/453.7538d639.chunk.js",
+    "index.html": "/senmorphus/index.html",
+    "main.e6c13ad2.css.map": "/senmorphus/static/css/main.e6c13ad2.css.map",
+    "main.976d1ee0.js.map": "/senmorphus/static/js/main.976d1ee0.js.map",
+    "453.7538d639.chunk.js.map": "/senmorphus/static/js/453.7538d639.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.976d1ee0.js"
+  ]
+}
